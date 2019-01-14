@@ -1,12 +1,13 @@
-provider "azurerm" {
+/*provider "azurerm" {
   subscription_id = "${var.subID}"
   client_id       = "${var.clientID}"
   client_secret   = "${var.clientSecret}"
   tenant_id       = "${var.tenantID}"
-}
+}*/
 resource "azurerm_resource_group" "test" {
  name     = "${var.resourcegroupname}"
- location = "${var.location}"
+ #below we select index 0 from the locations variable list
+ location = "${var.location[0]}"
  tags     = "${var.tags}"
 }
 

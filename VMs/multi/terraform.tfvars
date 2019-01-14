@@ -8,9 +8,9 @@ tenantID = ""
 
 prefix = "VM"
 
-location = "West Europe"
+location = ["West Europe", "North Europe", "UK South", "UK West"]
 
-resourcegroupname = "RG_TestTF2"
+resourcegroupname = "RG_TestTF4"
 
 existingsubnetname = "default"
 

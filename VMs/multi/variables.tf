@@ -19,7 +19,8 @@ variable "prefix" {
 }
 
 variable "location" {
-    default = "West Europe"
+    type = "list"
+    default = []
 }
 
 variable "resourcegroupname" {
