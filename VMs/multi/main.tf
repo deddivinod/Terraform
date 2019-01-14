@@ -88,12 +88,13 @@ resource "azurerm_virtual_machine" "test" {
    version   = "latest"
  }
 
+#Create the OS disk and select index 1 from osmanageddisktype variable for standardssd_lrs
  storage_os_disk {
   
    name              = "${var.prefix}${count.index + 1}OSDisk"
    caching           = "ReadWrite"
    create_option     = "FromImage"
-   managed_disk_type = "${var.osmanageddisktype}"
+   managed_disk_type = "${var.osmanageddisktype[1]}"
  }
 
  # Optional data disks

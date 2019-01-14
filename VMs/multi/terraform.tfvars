@@ -34,6 +34,6 @@ vmoffer = "WindowsServer"
 
 vmsku = "2016-DataCenter"
 
-osmanageddisktype = "Standard_LRS"
+osmanageddisktype = ["Standard_LRS", "StandardSSD_LRS", "PremiumSSD_LRS"]
 
 

@@ -74,6 +74,7 @@ variable "existingsubnetname" {
 
          variable "osmanageddisktype" { 
              description = "the type of managed disk"
+             default = []
          }
 
          variable "tags" {
