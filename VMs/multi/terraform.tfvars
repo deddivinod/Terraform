@@ -16,7 +16,7 @@ existingsubnetname = "default"
 
 existingvnetname = "vnetWE"
 
-vnetresourcegroup = "RG_NetworkWE"
+existingvnetresourcegroup = "RG_NetworkWE"
 
 count = 1
 

@@ -30,7 +30,7 @@ resource "azurerm_storage_account" "diagaccount" {
 data "azurerm_subnet" "test" {
   name                 = "${var.existingsubnetname}"
   virtual_network_name = "${var.existingvnetname}"
-  resource_group_name  = "${var.vnetresourcegroup}"
+  resource_group_name  = "${var.existingvnetresourcegroup}"
 }
 
 resource "azurerm_network_interface" "test" {

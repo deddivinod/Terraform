@@ -35,7 +35,7 @@ variable "existingsubnetname" {
      description = "the name of the vnet the vm should be on"
   }
 
-  variable "vnetresourcegroup" {
+  variable "existingvnetresourcegroup" {
       description = "the resource group that holds the vnet"
    }
 
