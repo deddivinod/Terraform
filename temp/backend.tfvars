@@ -1,0 +1,5 @@
+resource_group_name = "RG_TerraformStateFiles"
+storage_account_name = "saterraformstatefiles"
+container_name = "statefiles"
+access_key = "${data.azurerm_key_vault_secret.saKey.value}"
+key = "test.tfstate"
