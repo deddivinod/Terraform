@@ -1,2 +1,2 @@
 # Terraform
-Terraform Stuff for Azure mainly
+Terraform Stuff for Azure

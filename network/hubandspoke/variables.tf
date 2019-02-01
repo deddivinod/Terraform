@@ -87,7 +87,7 @@ variable "subnet1AddressPrefix" {
    }
    variable "tags" {
         default     = {
-            source  = "citadel"
-            env     = "training"
+            source  = "pmp"
+            env     = "live"
     }
          }

@@ -79,8 +79,8 @@ variable "existingsubnetname" {
 
          variable "tags" {
         default     = {
-            source  = "citadel"
-            env     = "training"
+            source  = "pmp"
+            env     = "live"
     }
          }
 
