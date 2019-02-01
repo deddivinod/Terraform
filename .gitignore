@@ -48,3 +48,6 @@ OMS/.terraform/plugins/windows_amd64/lock.json
 OMS/terraform.tfstate.backup
 OMS/terraform.tfstate
 OMS/.terraform/plugins/windows_amd64/terraform-provider-azurerm_v1.8.0_x4.exe
+temp/.terraform/plugins/windows_amd64/terraform-provider-azurerm_v1.21.0_x4.exe
+temp/.terraform/plugins/windows_amd64/lock.json
+temp/.terraform/terraform.tfstate
