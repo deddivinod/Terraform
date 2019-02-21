@@ -22,12 +22,14 @@ data "azurerm_subnet" "websubnet" {
   name                 = "${var.prodwebsubnetname}"
   virtual_network_name = "${var.ProdVnetName}"
   resource_group_name  = "${var.prodvNetResourceGroup}"
+  depends_on = ["azurerm_subnet.prodwebsubnet"]
 }
 
 resource "azurerm_network_interface" "webvmnic" {
  name                = "${var.webvmname}-NIC"
  location            = "${azurerm_resource_group.prodwebresourcegroup.location}"
  resource_group_name = "${azurerm_resource_group.prodwebresourcegroup.name}"
+ 
 
  ip_configuration {
    name                          = "ipConfig"

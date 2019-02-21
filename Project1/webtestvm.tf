@@ -22,6 +22,7 @@ data "azurerm_subnet" "testwebsubnet" {
   name                 = "${var.testwebsubnetname}"
   virtual_network_name = "${var.TestVnetName}"
   resource_group_name  = "${var.testVnetResourceGroup}"
+  depends_on = ["azurerm_subnet.testwebsubnet"]
 }
 
 resource "azurerm_network_interface" "testwebvmnic" {

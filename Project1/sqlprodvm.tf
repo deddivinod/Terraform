@@ -22,6 +22,7 @@ data "azurerm_subnet" "sqlsubnet" {
   name                 = "${var.prodsqlsubnetname}"
   virtual_network_name = "${var.ProdVnetName}"
   resource_group_name  = "${var.prodvNetResourceGroup}"
+  depends_on = ["azurerm_subnet.prodsqlsubnet"]
 }
 
 resource "azurerm_network_interface" "sqlvmnic" {

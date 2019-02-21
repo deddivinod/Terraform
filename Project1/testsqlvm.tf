@@ -22,6 +22,7 @@ data "azurerm_subnet" "testsqlsubnet" {
   name                 = "${var.testsqlsubnetname}"
   virtual_network_name = "${var.TestVnetName}"
   resource_group_name  = "${var.testVnetResourceGroup}"
+  depends_on = ["azurerm_subnet.testsqlsubnet"]
 }
 
 resource "azurerm_network_interface" "testsqlvmnic" {
@@ -31,7 +32,7 @@ resource "azurerm_network_interface" "testsqlvmnic" {
 
  ip_configuration {
    name                          = "ipConfig"
-   subnet_id                     = "${data.azurerm_subnet.sqlsubnet.id}"
+   subnet_id                     = "${data.azurerm_subnet.testsqlsubnet.id}"
    private_ip_address_allocation = "dynamic"
   
  }
