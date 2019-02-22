@@ -5,7 +5,7 @@ variable "prodvmlocation" {
      default = "West US"
  }
 variable "prodwebresourcegroupname" {
-      default = "WUS-RG-WEb-Prod"
+      default = "WUS-RG-Prod-Web"
  }
 variable "webvmname" {
        default = "WUSVFAWebprod01"

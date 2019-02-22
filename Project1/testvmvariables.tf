@@ -6,7 +6,7 @@ variable "testvmlocation" {
 }
 
 variable "testwebresourcegroupname" {
-    default = "WUS-RG-WEb-Test"
+    default = "WUS-RG-Test-Web"
 }
 variable "testwebvmname" {
     default = "WUSVFAWebTest01"
