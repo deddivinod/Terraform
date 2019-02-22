@@ -1,44 +1,44 @@
-  variable "prodlocation" {
+variable "prodlocation" {
   default = "West US"
 }
-  variable "testLocation" {
+variable "testLocation" {
   default = "West US"
 }
-  variable "ProdVnetName" {
+variable "ProdVnetName" {
     default = "WUS-VNET-ProdvNet"
-   }
-   variable "TestVnetName" {
+}
+variable "TestVnetName" {
      default = "WUS-VNET-TestVnet"
-    }
-   variable "ProdVnetAddressSpace" { 
+}
+variable "ProdVnetAddressSpace" { 
      type = "list"
      default = ["192.168.0.0/24"]
-   }
-   variable "prodwebsubnetname" {
+}
+variable "prodwebsubnetname" {
      default = "WUS-SUB-Web-Prod"
-    }
-    variable "prodwebsubnetprefix" {
+}
+variable "prodwebsubnetprefix" {
       default = "192.168.0.0/27"
-     }
-    variable "prodsqlsubnetname" {
+}
+variable "prodsqlsubnetname" {
       default = "WUS-SUB-SQL-Prod"
-     }
-     variable "prodsqlsubnetprefix" {
+}
+variable "prodsqlsubnetprefix" {
        default = "192.168.0.32/27"
-      }
-    variable "TestVnetAddressSpace" { 
+}
+variable "TestVnetAddressSpace" { 
       type = "list"
      default = ["192.168.1.0/24"]
-   }
-    variable "testwebsubnetname" {
+}
+variable "testwebsubnetname" {
      default = "WUS-SUB-Web-Test"
-    }
-     variable "testwebsubnetprefix" {
+}
+variable "testwebsubnetprefix" {
       default = "192.168.1.0/27"
-     }
-     variable "testsqlsubnetname" {
+}
+variable "testsqlsubnetname" {
        default = "WUS-SUB-SQL-Test"
-      }
+}
       variable "testsqlsubnetprefix" {
         default = "192.168.1.32/27"
        }
