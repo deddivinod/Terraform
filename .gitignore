@@ -57,3 +57,6 @@ Project1/.terraform/plugins/windows_amd64/lock.json
 .gitignore
 Project1/.terraform.tfstate.lock.info
 Project1/terraform.tfstate
+Project1/terraform.tfstate.backup
+Project1/terraform.tfstate.backup
+Project1/terraform.tfstate.backup
