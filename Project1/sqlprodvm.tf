@@ -37,6 +37,12 @@ resource "azurerm_network_interface" "sqlvmnic" {
   
  }
 }
+resource "azurerm_network_interface_backend_address_pool_association" "prodsqlbackendpollassociation" {
+  network_interface_id = "${azurerm_network_interface.sqlvmnic.id}"
+  ip_configuration_name = "ipConfig"
+  backend_address_pool_id = "${azurerm_lb_backend_address_pool.prodsqlbackendpool.id}"
+}
+
 resource "azurerm_virtual_machine" "sqlvm" {
   name                  = "${var.sqlvmname}"
   location              = "${azurerm_resource_group.prodsqlresourcegroup.location}"
