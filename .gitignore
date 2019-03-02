@@ -60,3 +60,5 @@ Project1/terraform.tfstate
 Project1/terraform.tfstate.backup
 Project1/terraform.tfstate.backup
 Project1/terraform.tfstate.backup
+OMS/.terraform/plugins/windows_amd64/terraform-provider-azurerm_v1.22.1_x4.exe
+.gitignore
