@@ -23,7 +23,7 @@ subnet1AddressPrefix = "10.10.2.0/24"
 
 hubtospok2VnetPeerName = "hubtospoke2peer"
 
-    routeTableName = "routetable"
+routeTableName = "routetable"
 
      routeName = "spoketohubroute"
 
