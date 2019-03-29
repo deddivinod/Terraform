@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "RG_NetworkTF" {
-   name = "RG_NetworkTF"
+   name = "RG_NetworkTFtest"
    location = "${var.location}"
    tags     = "${var.tags}"
 }
