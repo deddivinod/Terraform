@@ -59,7 +59,7 @@ resource "azurerm_security_center_subscription_pricing" "seccenterstandard" {
 }
 
 resource "azurerm_security_center_contact" "seccentercontact" {
-  email               = "ppaginton@gmail.com"
+  email               = var.seccenteremailaddress
   phone               = "+1-555-555-5555"
   alert_notifications = true
   alerts_to_admins    = false

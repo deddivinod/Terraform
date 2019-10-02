@@ -147,3 +147,5 @@ wincount = 1
 windowsusername = "azadmin"
 
 seccenterscope = ""
+
+seccenteremailaddress = ""

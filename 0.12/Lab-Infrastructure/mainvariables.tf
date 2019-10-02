@@ -49,3 +49,7 @@ variable "windowsvmsresourcegroup"{
   
 }
 
+variable "seccenteremailaddress" {
+  
+}
+
