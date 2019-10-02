@@ -76,9 +76,9 @@ keyvaultresourcegroupname = "RG_DevKeyVaultWE"
 
 keyvaultname = "DevVSEntKeyVaultWE"
 
-tenantid = "ba5f6222-dd4a-453b-9e2b-739eaf98e1da"
+tenantid = ""
 
-devlocaladminpwd = "hytby89olo./ae45tv-20poastty"
+devlocaladminpwd = ""
 
 vpngwname = "devvpngw"
 
@@ -86,11 +86,11 @@ vpngwpipname = "devvpngwPIP"
 
 localnetname = "localnetGWHome"
 
-localgwaddress = "81.141.134.9"
+localgwaddress = ""
 
-localaddressspace = ["192.168.0.0/24"]
+localaddressspace = [""]
 
-vpnpsk  = "4-v3ry-53cr37-1p53c-5h4r3d-k3y"
+vpnpsk  = ""
 
 recoveryvaultrgname = "RG_DevRecoveryVaultWE"
 
@@ -146,4 +146,4 @@ wincount = 1
 
 windowsusername = "azadmin"
 
-seccenterscope = "/subscriptions/f8bf7adc-eeed-4320-b9e4-b30e582ef115"
+seccenterscope = ""
