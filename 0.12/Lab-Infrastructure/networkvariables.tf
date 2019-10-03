@@ -2,7 +2,7 @@ variable "hubvnetname" {
 }
 
 variable "hubaddressspace" {
-  type = map(string)
+  type = list(string)
 }
 
 variable "azFireWallSubnetPreFix" {
