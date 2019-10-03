@@ -38,6 +38,24 @@ resource "azurerm_key_vault_access_policy" "paulpaccess" {
     "list",
   ]
 }
+
+resource "azurerm_key_vault_access_policy" "serviceprincipalaccess" {
+  key_vault_id          = azurerm_key_vault.keyvault.id
+  tenant_id = var.tenantid
+  object_id = "0b5d2943-6f65-48dd-a218-f7832a755f28"
+
+  key_permissions = [
+    "get",
+    "create",
+  ]
+
+  secret_permissions = [
+    "get",
+    "set",
+    "delete",
+    "list",
+  ]
+}
 resource "random_string" "rndpwd" {
   length  = 16
   lower   = true
