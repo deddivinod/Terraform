@@ -94,7 +94,7 @@ variable "spoke2Subnet1AddressPrefix" {
 variable "spoke2ToHubVnetPeerName" {
   description = "the name of the peering between spoke1 vnet and hub"
 }
-
+/*
 variable "vpngwname" {
 }
 
@@ -113,4 +113,5 @@ variable "localaddressspace" {
 
 variable "vpnpsk" {
 }
+*/
 
