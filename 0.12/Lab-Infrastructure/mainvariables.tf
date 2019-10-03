@@ -32,6 +32,15 @@ variable "keyvaultname" {
 variable "tenantid" {
 }
 
+variable "subscriptionID" {
+}
+
+variable "clientID"{}
+
+variable "client_secret"{}
+
+variable "tenant_ID"{}
+
 #variable "devlocaladminpwd" {
 #}
 
