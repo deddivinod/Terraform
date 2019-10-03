@@ -32,8 +32,8 @@ variable "keyvaultname" {
 variable "tenantid" {
 }
 
-variable "devlocaladminpwd" {
-}
+#variable "devlocaladminpwd" {
+#}
 
 variable "recoveryvaultrgname" {
 }
