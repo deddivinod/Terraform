@@ -53,12 +53,12 @@ resource "azurerm_key_vault_secret" "windowslocaladminsecret" {
   tags         = azurerm_resource_group.keyvaultrg.tags
 }
 
-resource "azurerm_key_vault_secret" "vpnpresharedkey" {
-  name         = "vpnpsk"
-  value        = var.vpnpsk
-  key_vault_id = azurerm_key_vault.keyvault.id
-  tags         = azurerm_resource_group.keyvaultrg.tags
-}
+#resource "azurerm_key_vault_secret" "vpnpresharedkey" {
+#  name         = "vpnpsk"
+#  value        = var.vpnpsk
+#  key_vault_id = azurerm_key_vault.keyvault.id
+#  tags         = azurerm_resource_group.keyvaultrg.tags
+#}
 
 
 
