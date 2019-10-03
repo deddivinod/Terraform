@@ -39,7 +39,6 @@ variable "clientID"{}
 
 variable "client_secret"{}
 
-variable "tenant_ID"{}
 
 #variable "devlocaladminpwd" {
 #}
