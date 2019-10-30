@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "openvpnrg" {
-  name     = var.openvpnresourcegroupname
+  name = var.openvpnresourcegroupname
   location = var.location
   tags     = var.tags
 }
 
-data "azurerm_subnet" "devspoke2virtnet" {
+data "azurerm_subnet" "devspoke2vnet" {
   name                 = "devspoke2Subnet1"
   virtual_network_name = "devspoke2vnet"
   resource_group_name  = "RG_DevNetworkWE"
@@ -33,14 +33,15 @@ resource "azurerm_network_interface" "openvpnvmvnic" {
 
   ip_configuration {
     name                          = "ipConfig"
-    subnet_id                     = data.azurerm_subnet.devspoke2virtnet.id
+    subnet_id                     = data.azurerm_subnet.devspoke2vnet.id
     private_ip_address_allocation = "dynamic"
-    public_ip_address_id          = "${length(azurerm_public_ip.openvpnpip.*.id) > 0 ? element(concat(azurerm_public_ip.openvpnpip.*.id, list("")), count.index) : ""}"
+    public_ip_address_id          = azurerm_public_ip.openvpnpip.id{count.index + 1}
+    
   }
 }
 
 resource "azurerm_public_ip" "openvpnpip" {
-  count                        =  var.ubuntucount
+  count                        = var.ubuntucount
   name                         = "${var.ubuntuprefix}${count.index + 1}-PIP"
   location                     = "${azurerm_resource_group.openvpnrg.location}"
   resource_group_name          = "${azurerm_resource_group.openvpnrg.name}"
@@ -71,7 +72,7 @@ resource "azurerm_virtual_machine" "openvpnvms" {
   count                 = var.ubuntucount
   name                  = "${var.ubuntuprefix}${count.index + 1}"
   location              = azurerm_resource_group.openvpnrg.location
-  #availability_set_id   = azurerm_availability_set.studylinuxavset.id
+  availability_set_id   = azurerm_availability_set.studylinuxavset.id
   resource_group_name   = azurerm_resource_group.openvpnrg.name
   network_interface_ids = [element(azurerm_network_interface.openvpnvmvnic.*.id, count.index)]
   vm_size               = var.vmsize
@@ -94,7 +95,7 @@ resource "azurerm_virtual_machine" "openvpnvms" {
     name              = "${var.ubuntuprefix}${count.index + 1}OSDisk"
     caching           = "ReadWrite"
     create_option     = "FromImage"
-    managed_disk_type = var.osmanageddisktype
+    managed_disk_type = var.osmanageddisktype[1]
   }
 
   # Optional data disks
@@ -131,7 +132,7 @@ resource "azurerm_virtual_machine" "openvpnvms" {
     enabled     = "true"
     storage_uri = azurerm_storage_account.diagaccount.primary_blob_endpoint
   }
-  tags = var.tags
+  tags = var.vmtags
 }
 
 
